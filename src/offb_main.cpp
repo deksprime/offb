@@ -122,7 +122,7 @@ int main(int argc, char **argv)
         int c = getch();
         if (c != EOF) {
             switch (c) {
-            case 65:    // key up
+            case 65:    // capital W
                 pose.pose.position.z += 1;
                 break;
             case 66:    // key down
