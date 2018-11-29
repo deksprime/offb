@@ -136,8 +136,10 @@ int main(int argc, char **argv)
                 break;
             case 82:    // capitalized R
                 pose.pose.position.z += 1;
+                break;
             case 70:    // capitalized F
                 pose.pose.position.z -= 1;
+                break;
             case 63:
                 return 0;
                 break;
