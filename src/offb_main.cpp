@@ -103,7 +103,7 @@ int main(int argc, char **argv)
         if (current_state.mode != "OFFBOARD" &&
                 (ros::Time::now() - last_request > ros::Duration(5.0))) {
             if( set_mode_client.call(offb_set_mode) &&
-                    offb_set_mode.response.success) {
+                    offb_set_mode.response.mode_sent) {
                 ROS_INFO("Offboard enabled");
             }
             last_request = ros::Time::now();
@@ -122,18 +122,22 @@ int main(int argc, char **argv)
         int c = getch();
         if (c != EOF) {
             switch (c) {
-            case 65:    // capital W
-                pose.pose.position.z += 1;
+            case 87:    // capitalized W
+                pose.pose.position.x += 1;
                 break;
-            case 66:    // key down
-                pose.pose.position.z += -1;
+            case 83:    // capitalized S
+                pose.pose.position.x += -1;
                 break;
-            case 67:    // key right
+            case 68:    // capitalized D
                 pose.pose.position.y += 1;
                 break;
-            case 68:    // key left
+            case 65:    // capitalized A
                 pose.pose.position.y -= 1;
                 break;
+            case 82:    // capitalized R
+                pose.pose.position.z += 1;
+            case 70:    // capitalized F
+                pose.pose.position.z -= 1;
             case 63:
                 return 0;
                 break;
