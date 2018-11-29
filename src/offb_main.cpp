@@ -128,10 +128,10 @@ int main(int argc, char **argv)
             case 83:    // capitalized S
                 pose.pose.position.x += -1;
                 break;
-            case 68:    // capitalized D
+            case 65:    // capitalized A
                 pose.pose.position.y += 1;
                 break;
-            case 65:    // capitalized A
+            case 68:    // capitalized D
                 pose.pose.position.y -= 1;
                 break;
             case 82:    // capitalized R
