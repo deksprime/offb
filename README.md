@@ -16,7 +16,7 @@ The initial implementation is taken from the [MAVROS offboard control example](h
 
 ```
 cd ~/wherever/
-git clone https://github.com/julianoes/offb.git
+git clone https://github.com/deksprime/offb.git
 cd ~/catkin_ws
 ln -s ~/wherever/offb ~/catkin_ws/src/offb
 catkin_make
@@ -26,7 +26,7 @@ catkin_make
 
 Start PX4 with e.g.:
 ```
-make posix gazebo
+make posix gazebo (in PX4 this always changes so this command is TBD)
 ```
 
 Then start MAVROS:
